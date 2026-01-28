@@ -140,3 +140,5 @@ for i in range(n):
 
 
 ## Reference: https://www.youtube.com/watch?v=fX64q6sYom0
+
+## For Numbers: https://www.youtube.com/watch?v=npopDLgUXzU 
