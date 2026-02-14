@@ -14,4 +14,4 @@ class Solution:
 
 b = Solution()
 print(b.largestElement([3, 3, 6, 1]))
-print(b.largestElement([3, 3, 0, 99, -40]))
+print(b.largestElement([-4, -3, 0, 1, -8]))
