@@ -14,8 +14,6 @@ class Solution:
                 right -= 1
         return "".join(s)
         
-
-
 s = "abcdefg"
 k = 2
 d = Solution()
