@@ -48,3 +48,11 @@ group by order_date
 select * from customer_orders;
 
 
+
+with first_visit as (
+select customer_id, min(order_date) as first_visit_date from customer_orders group by customer_id)
+
+select order_date,
+sum(case when co.order_date = fv.first_visit_date then 1 else 0 end) as first_visit_flag, 
+sum(case when co.order_date != fv.first_visit_date then 1 else 0 end) as repeated_vist
+ from customer_orders co inner join first_visit fv on co.customer_id = fv.customer_id group by order_date;
