@@ -4,15 +4,15 @@ class Solution:
         n = len(nums)
         result = []
         for i in range(n-k+1): # number of subarrays 7- 3 + 1 = 5
-            window = nums[i:i+k]
-            print(window)
+            # window = nums[i:i+k]
+            # print(window)
             valid = True
             for j in range(i, i + k - 1):
                 if nums[j+1] != nums[j] + 1:
                     valid = False
                     break
             if valid:
-                result.append(window[-1])  # maximum element
+                result.append(nums[i+k-1])  # maximum element
             else:
                 result.append(-1)
         return result
